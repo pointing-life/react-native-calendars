@@ -369,7 +369,6 @@ class Calendar extends Component {
 
     const headerProps = {
       testID: this.props.testID,
-      ref: (c) => (this.header = c),
       style: this.props.headerStyle,
       theme: this.props.theme,
       hideArrows: this.props.hideArrows,

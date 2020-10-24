@@ -33,15 +33,15 @@ const CalendarsScreen = () => {
       dotColor: 'red',
       activeOpacity: 0,
       selected: true,
-      selectedColor: 'red'
+      selectedColor: 'red',
     },
-    '2020-06-26': {disabled: true, disableTouchEvent: true}
+    '2020-06-26': {disabled: true, disableTouchEvent: true},
   };
 
   const dayUnderView = (date) => {
     let keys = Object.keys(dayUnderViewData);
     let dayUnderView = null;
-    if(keys.indexOf(date.dateString) >= 0 ){
+    if (keys.indexOf(date.dateString) >= 0) {
       dayUnderView = <Text style={styles.underViewStar}>{'@@'}</Text>;
     }
     return dayUnderView;
@@ -384,10 +384,10 @@ const CalendarsScreen = () => {
           current={'2020-06-16'}
           markedDates={dayUnderViewData}
           theme={{
-            dayContainerStyle:{
-              height: 40 //allow user give a height to show each week row of month as a same height
+            dayContainerStyle: {
+              height: 40, //allow user give a height to show each week row of month as a same height
             },
-            daySideLength: 38
+            daySideLength: 38,
           }}
           renderUnderDayView={dayUnderView}
         />
@@ -463,9 +463,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 10,
     backgroundColor: 'lightgrey',
-    fontSize: 16
+    fontSize: 16,
   },
-  underViewStar:{
-    color: '#e91929'
-  }
+  underViewStar: {
+    color: '#e91929',
+  },
 });
