@@ -104,6 +104,7 @@ class Day extends Component {
           disabled={shouldDisableTouchEvent}
           accessibilityRole={isDisabled ? undefined : 'button'}
           accessibilityLabel={this.props.accessibilityLabel}
+          hitSlop={{left: 20, right: 20, top: 20, bottom: 20}}
         >
           <Text allowFontScaling={false} style={textStyle}>
             {String(this.props.children)}
